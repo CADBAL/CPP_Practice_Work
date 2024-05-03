@@ -1,0 +1,5 @@
+# Don't stage and/or commit executable files
+*.exe
+
+# Don't stage and/or commit executable files
+*.o
