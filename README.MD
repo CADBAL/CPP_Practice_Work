@@ -14,5 +14,9 @@
 # When working in a windows environment, to install make you need to first install chocalatey
 # (Next steps still need to be examined then will be put on this line)
 
+# To check if make is installed in windows type make --version oin powershell
+# To make powershell default terminal open command palette (ctrl + shift + p)
+# then select Terminal: Select Default Profile
+
 
 
