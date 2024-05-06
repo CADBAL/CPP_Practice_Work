@@ -1,5 +1,9 @@
 # Don't stage and/or commit executable files
 *.exe
 
-# Don't stage and/or commit executable files
+# Don't stage and/or commit object files
 *.o
+
+# Don't stage and/or commit .out extension files which is a compiled executable file
+# created in unix-like operating systems such as Linux
+*.out

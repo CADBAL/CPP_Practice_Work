@@ -3,3 +3,6 @@
 # 1: tasks.json
 
 # 2: launch.json
+
+# When running a make file in subdirectory in bash write "make -C path"
+# e.g "make -C Chapter2/2.8

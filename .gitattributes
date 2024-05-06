@@ -1,0 +1,14 @@
+
+# Windows and Linux use different default line endings
+# Git may report a large number of modified files that have no differences aside from their line endings
+# To resolve this the default behaviour of line endings will be LF(line feed)
+# except in windows environments whose default environment is CRLF(carriage return line feed)
+* text=auto eol=lf
+
+# Below line This line specifies that files with extensions .cmd or .CMD should be treated as text files, 
+# and Git should use CRLF (carriage return line feed) as the end-of-line character.
+*.{cmd,[cC][mM][dD]} text eol=crlf
+
+# Similarly, the below line specifies that files with extensions .bat or .BAT should be treated as text files,
+# and Git should use CRLF (carriage return line feed) as the end-of-line character.
+*.{bat,[bB][aA][tT]} text eol=crlf
