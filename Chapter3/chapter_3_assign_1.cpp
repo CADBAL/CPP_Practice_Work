@@ -9,7 +9,7 @@ std::cerr << "getValue() called\n";
 int main()
 {
 std::cerr << "main() called\n";
-    std::cout << getValue << '\n';
+    std::cout << getValue() << '\n';
 
     return 0;
 }

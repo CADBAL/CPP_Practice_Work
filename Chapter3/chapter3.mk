@@ -8,3 +8,4 @@ compile_chapter_3: link_chapter_3
 
 clean:
 	rm *.o *.exe
+ 
