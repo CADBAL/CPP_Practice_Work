@@ -46,6 +46,6 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
-    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++", // For Windows: set compilerPath to "C:\\msys64\\ucrt64\\bin\\g++.exe"
     "C_Cpp.default.cppStandard": "c++23"
 }

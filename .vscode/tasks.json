@@ -5,18 +5,18 @@
             "label": "C/C++: g++.exe build active file", //The label value is what you will see in the 
             //tasks list; you can name this whatever you like.
 
-            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "command": "/usr/bin/g++", // For Windows: use "C:\\msys64\\ucrt64\\bin\\g++.exe" instead of "/usr/bin/g++"
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "-ggdb", // This is used for debugging build
                 // ggdb: Generates additional debug information compatible with the GDB debugger.
 
-                "-O2", // This is used for release build
+                //"-O2", // This is used for release build
                 // Sets the optimization level to 2, 
                 // which enables most optimizations without increasing the compilation time significantly.
 
-                "-DNDEBUG", // This is used for release build as well
+                //"-DNDEBUG", // This is used for release build as well
                 //  Defines the NDEBUG macro, which typically disables assertions in your code.
 
                 "-pedantic-errors", // Used to disable compiler extensions that are incompatible with 
@@ -53,7 +53,7 @@
 
                 "-o", // Specifies the output file for the compiled executable.
 
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}" // For Windows: add ".exe" and use backslashes like "\\"
             ],
             "options": {
                 "cwd": "${fileDirname}"
