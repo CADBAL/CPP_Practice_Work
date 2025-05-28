@@ -18,5 +18,12 @@
 # To make powershell default terminal open command palette (ctrl + shift + p)
 # then select Terminal: Select Default Profile
 
+# To ensure debugging is properly setup look through the .vscode files.
+# Majority of the time WSL within VSCODE is used for this project
+# Need to ensure GDB is installed for debugging using below commands.
+# sudo apt update
+# sudo apt install gdb
+
+
 
 
