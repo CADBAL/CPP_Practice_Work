@@ -6,7 +6,7 @@
 
 int main()
 {
-    std::cout << "Testing Git merge functionality";
+    std::cout << "Testing Git merge functionality" << "\n";
 
     return 0;
 }
