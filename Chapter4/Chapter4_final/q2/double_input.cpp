@@ -7,4 +7,3 @@ double double_input() {
     return double_num;
 }
 
-#endif

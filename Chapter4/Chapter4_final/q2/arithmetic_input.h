@@ -1,7 +1,7 @@
-#ifndef ARITHMETIC_INPUT
-#define ARITHMETIC_INPUT
+#ifndef ARITHMETIC_INPUT_H
+#define ARITHMETIC_INPUT_H
 
 char arithmetic_input();
 
-#ifndef
+#endif
 
