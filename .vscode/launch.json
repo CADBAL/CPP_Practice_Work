@@ -1,8 +1,23 @@
 {
+    "version": "2.0.0",
     "configurations": [
-    
+
         {
-            "name": "C/C++: g++.exe build and debug active file",
+            // Below is for when you want to debug a a project within a folder using a makefile
+            "name": "Debug (make, output = active filename)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "cwd": "${fileDirname}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "externalConsole": false,
+            "stopAtEntry": true,
+            "preLaunchTask": "make build (current folder)"
+        },
+        {
+            // Below is for when you want to debug only a single file which doesn't utilize a makefile
+            "name": "Debug (single file build)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}", // For Windows: add ".exe" and use backslashes like "\\"
@@ -25,8 +40,19 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build active file"
+            "preLaunchTask": "C/C++: g++.exe build active file (WSL)"
+        }, 
+        {    // Below is for when you want to 'make clean' in the current folder
+            "name": "Clean only (make clean)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/bin/true",
+            "cwd": "${fileDirname}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "externalConsole": true,
+            "stopAtEntry": true,
+            "preLaunchTask": "make clean (current folder)"
         }
     ],
-    "version": "2.0.0"
 }

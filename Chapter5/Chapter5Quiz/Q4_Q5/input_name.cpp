@@ -4,6 +4,6 @@
 
 std::string input_name() {
     std::string name{};
-    std::getline(std::cin, name);
+    std::getline(std::cin >> std::ws, name);
     return name;
 }

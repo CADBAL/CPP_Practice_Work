@@ -1,18 +1,26 @@
 CXX := g++
-CXXFLAGS := -std=c++20 -Wall -Wextra -g
+CXXFLAGS := -std=c++23 -O0 -g -ggdb \
+-pedantic-errors \
+-Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion \
+-Werror
 
-TARGET := Q4
-OBJS := Q4.o age_comparision.o input_age.o input_name.o
+# Output name (default 'app' if not supplied by the task)
+MAIN ?= app
 
-all: $(TARGET)
+SRCS := $(wildcard *.cpp)
+OBJS := $(SRCS:.cpp=.o)
 
-$(TARGET): $(OBJS)
-	$(CXX) $(OBJS) -o $@
+.PHONY: all clean
+all: $(MAIN)
+
+$(MAIN): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $@
+
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-clean:
-	rm -f *.o $(TARGET) Q4.exe
 
-.PHONY: all clean
+clean:
+	@echo "Cleaning objects and binaries..."
+	rm -f $(OBJS) $(MAIN)

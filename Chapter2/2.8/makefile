@@ -14,7 +14,7 @@ compile_add_2.8: link_add_2.8
 
 
 clean:
-	rm *.o *.exe
+	rm *.o *.ex
 
 
 
