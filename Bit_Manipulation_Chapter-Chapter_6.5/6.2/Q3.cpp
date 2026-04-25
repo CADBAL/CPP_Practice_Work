@@ -2,13 +2,12 @@
 #include <iostream>
 
 std::bitset<4> rotl(std::bitset<4> bits) {
-    if (bits.test(3) == 0) {
-        bits <<= 1;
-    } else {
-        bits <<= 1;
+    if (bits.test(3) == 1) {
+        bits << 1;
         bits.set(0);
-    }
-    return bits;
+    } else {
+        bits << 1;
+    } return bits;
 }
 
 int main()
